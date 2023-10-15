@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container h1 {
+  margin-bottom: 1rem;
+}
+
+.time {
+  font-size: 10rem;
+}
+
+.button {
+  padding: 10px;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
