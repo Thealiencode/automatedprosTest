@@ -12,6 +12,7 @@ export default function Page() {
       if (typeof ethereum == "undefined")
         return alert("Please install metamask");
 
+      await ethereum.enable();
       const web3 = new Web3(ethereum);
       var accounts = await web3.eth.getAccounts();
 
