@@ -36,6 +36,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 # Credit
 Created by:
-<a href="https://github.com/Thealiencode/automatedprosTest.git" target="_blank"> `[Golden Moses]` </a>
+<a href="https://github.com/Thealiencode/automatedprosTest.git" target="_blank"> `[Golden Moses]` </a><br />
 Minor Contribution by 😁:
 <a href="https://github.com/Olayiwolaaa" target="_blank"> `[Olayiwola Karaole]` </a>
