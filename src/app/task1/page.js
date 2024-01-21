@@ -5,7 +5,7 @@ import "./page.css";
 
 export default function Page() {
   const [wallet, setWallet] = useState("");
-  const [balance, setBalance] = useState(0);
+  const [balance, setBalance] = useState(null);
 
   const connectWallet = async () => {
     try {
@@ -29,13 +29,13 @@ export default function Page() {
 
   useEffect(() => {
     connectWallet();
-  });
+  }, []);
 
   return (
     <div className="container mb">
       <h1>Wallet Address: {wallet}</h1>
       <h1>
-        Wallet balance: {balance ? `${balance} ETH` : "Loading..."}
+        Wallet balance: {balance ? `${balance} ETH` : ""}
       </h1>
     </div>
   );

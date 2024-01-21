@@ -2,7 +2,7 @@
 import { useState } from "react";
 import "./page.css"
 
-export default function page()  {
+const Page = () =>  {
     const [backgroundColor, setBackgroundColor] = useState("green");
   
     const handleMouseMove = (event) => {
@@ -19,4 +19,4 @@ export default function page()  {
   )
 }
 
-
+export default Page;
