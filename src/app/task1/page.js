@@ -9,8 +9,9 @@ export default function Page() {
 
   const connectWallet = async () => {
     try {
-      if (typeof ethereum == "undefined")
-        return alert("Please install metamask");
+      if (typeof ethereum === "undefined") {
+        throw new Error("MetaMask not detected. Please install MetaMask.");
+      }
 
       await ethereum.enable();
       const web3 = new Web3(ethereum);
@@ -22,7 +23,7 @@ export default function Page() {
       setWallet(accounts[0]);
       setBalance(balanceInEth);
     } catch (error) {
-      console.log(error);
+      console.log(error.message);
     }
   };
 
@@ -33,7 +34,9 @@ export default function Page() {
   return (
     <div className="container mb">
       <h1>Wallet Address: {wallet}</h1>
-      <h1>Wallet balance: {balance ? `${balance} eth` : ""}</h1>
+      <h1>
+        Wallet balance: {balance ? `${balance} ETH` : "Loading..."}
+      </h1>
     </div>
   );
 }
